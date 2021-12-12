@@ -1,12 +1,12 @@
 import React from 'react';
-import {View} from 'react-native';
-import { mainStyle } from '../styles'
+import { View, Text } from 'react-native';
+// import { mainStyle } from '../styles'
 
 export default function Main() {
 
     return (
-        <View style= {mainStyle.main}>
-
+        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+            <Text style={{ color: '#000' }}>This is MAIN Screen</Text>
         </View>
     );
 }
