@@ -7,5 +7,9 @@ export const mainStyle = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: '#ccc',
         paddingTop: 30,
+    },
+    conteiner: {
+        flex: 1,
+        backgroundColor: '#000'
     }
 });
