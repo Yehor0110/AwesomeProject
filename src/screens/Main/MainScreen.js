@@ -1,34 +1,27 @@
-import React, { useState } from 'react';
-import {View, FlatList} from 'react-native';
-import ListItem from './components/ListItem';
-import Form from './components/Form';
-import { mainStyle } from './styles'
+import React from 'react';
+import Main from './components/Main/Main';
+import Contacts from './components/Contacts/Contacts'
+
+import { createStackNavigator } from '@react-navigation/stack';
+import { NavigationContainer } from '@react-navigation/native';
+
+const Stack = createStackNavigator();
 
 export default function HomeMain() {
-    const [listOfItems, setListOfItems] = useState([
-        {text: 'I want to buy everything', key: 1},
-    ]);
 
-    const addHandl = (text) => {
-        setListOfItems((list) => {
-            return [
-                { text:text, key: Math.random().toString(36).substring(7) },
-                ...list
-            ]
-        });
-    }
-
-    const deleteHandl = (key) => {
-        setListOfItems((list) => {
-            return list.filter(listOfItems => listOfItems.key != key)
-        });
-    }
-    return (
-        <View style= {mainStyle.main}>
-            <Form addHandl={addHandl} />
-            <FlatList data={listOfItems} renderItem = {({ item }) => (
-            <ListItem el={item} deleteHandl={deleteHandl} />
-        )} />
-        </View>
-    );
+    return <NavigationContainer>{
+            <Stack.Navigator>
+                <Stack.Screen 
+                    name="Main"
+                    component={Main}
+                    options={{title: 'Main page'}}
+                />
+                <Stack.Screen 
+                    name="Contacts"
+                    component={Contacts}
+                    options={{title: 'Main page'}}
+                />
+            </Stack.Navigator>}
+        </NavigationContainer> 
+    ;
 }
