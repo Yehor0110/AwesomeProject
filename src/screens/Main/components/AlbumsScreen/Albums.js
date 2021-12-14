@@ -2,6 +2,8 @@ import React from 'react';
 import { Button, View, Text } from 'react-native';
 import { albumsScreenStyle } from './styles';
 
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+
 export default function AlbumsScreen({ navigation, route }) {
     React.useEffect(() => {
         if (route.params?.post) {
