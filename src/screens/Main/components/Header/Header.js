@@ -6,7 +6,7 @@ export default function Header() {
     return(
         <View style={headerStyles.main}>
             <Text style={headerStyles.text}>
-                Shopping list
+                Awesome Project :)
             </Text>
             <View style={headerStyles.icon}>
                 <Text style={headerStyles.iconText}>Avatar</Text>
