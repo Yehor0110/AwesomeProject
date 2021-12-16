@@ -2,7 +2,6 @@ import * as React from 'react';
 import { SafeAreaView } from 'react-native';
 import Header from './screens/Main/components/Header/Header';
 import MainScreen from './screens/Main/MainScreen';
-import Footer from './screens/Main/components/Footer/Footer';
 import { mainStyle } from './screens/Main/styles';
 
 function App() {
@@ -10,7 +9,6 @@ function App() {
     <SafeAreaView style={mainStyle.conteiner}>
       <Header />
       <MainScreen />
-      <Footer />
     </SafeAreaView>
   );
 }

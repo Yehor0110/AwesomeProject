@@ -36,6 +36,11 @@ node_modules/
 npm-debug.log
 yarn-error.log
 
+#test-files.js
+#
+src/screens/Main/MainScreen2.js
+src/screens/Main/components/Home/Chat2.js
+src/screens/Main/components/SettingsScreen/Contacts2.js
 # BUCK
 buck-out/
 \.buckd/
