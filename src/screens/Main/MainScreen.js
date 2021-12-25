@@ -4,14 +4,14 @@ import HomeStackScreen from './components/Home/Home';
 import SettingsScreen from './components/SettingsScreen/Settings';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { NavigationContainer } from '@react-navigation/native';
+import Drawer from './components/DrawerNavigation/Drawer';
 
 
 const Tab = createBottomTabNavigator();
 
 export default function HomeMain() {
   return (
-    <NavigationContainer>
+    
       <Tab.Navigator
         screenOptions={({ route }) => ({
           tabBarIcon: ({ focused, color, size }) => {
@@ -32,9 +32,9 @@ export default function HomeMain() {
           tabBarInactiveTintColor: 'gray',
         })}
       >
-        <Tab.Screen name="Home" component={HomeStackScreen} options={{ tabBarBadge: 3 }} />
+        <Tab.Screen name="Home" component={HomeStackScreen} options={{ tabBarBadge: 3 }, { headerShown: false }} />
         <Tab.Screen name="Settings" component={SettingsScreen} />
+        <Tab.Screen name="Drawer" component={Drawer} options={{ headerShown: false }} />
       </Tab.Navigator>
-    </NavigationContainer>
   );
 }
