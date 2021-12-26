@@ -17,9 +17,9 @@ function HomeScreen({ navigation }) {
         <View style={homeScreenStyle.wrap}>
             <Text style={homeScreenStyle.text}>This is MAIN Screen</Text>
             <Button
-        title="Go to Details"
-        onPress={() => navigation.navigate('Details')}
-      />
+              title="Go to Details"
+              onPress={() => navigation.navigate('Details')}
+            />
         </View>
     );
 }

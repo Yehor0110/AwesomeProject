@@ -6,6 +6,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Drawer from './components/DrawerNavigation/Drawer';
 
+<ion-icon name="bulb-outline"></ion-icon>
 
 const Tab = createBottomTabNavigator();
 
@@ -19,10 +20,10 @@ export default function HomeMain() {
 
             if (route.name === 'Home') {
               iconName = focused
-                ? 'add-circle'
-                : 'add-circle-outline';
+                ? 'md-add-circle'
+                : 'md-add-circle';
             } else if (route.name === 'Settings') {
-              iconName = focused ? 'search-circle' : 'search-circle-outline';
+              iconName = focused ? 'md-bookmark' : 'md-bookmark';
             }
 
             // You can return any component that you like here!
